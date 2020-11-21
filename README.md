@@ -4,7 +4,7 @@
 
 ## electron appilcation
 * packaged ttv-ad-less-standalone into a simple application to use to watch streams.
-[ttv-viewer](https://github.com/revzim/ttv-viewer)
+* [ttv-viewer](https://github.com/revzim/ttv-viewer)
 
 ## install
 * git clone https://github.com/revzim/ttv-ad-less-standalone

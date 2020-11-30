@@ -21,5 +21,3 @@
 * [express](https://github.com/expressjs/express)
 
 #### author: revzim
-
-###### I have a working electron app for ad-less viewing. Feel free to message if interested.

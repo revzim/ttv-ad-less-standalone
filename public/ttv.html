@@ -2,14 +2,49 @@
 <html>
   <head>
     <title>ttv-ad-less-standalone</title>
+    <link rel="stylesheet" href="./../public/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./../public/css/tbar.css"/>
     <link rel="stylesheet" href="./../public/css/main.css" />
   </head>
-  <style>
-  </style>
   <body>
-    <div id="alert"></div>
+    <header id="titlebar">
+      <div id="drag-area">
+
+        <div id="window-title">
+          <span>ttv-viewer</span>
+        </div>
+
+        <div id="window-controls">
+          <!-- <div class="button" id="min-button">
+            <img class="icon" srcset="./../../public/base/header/min-w-10.png 1x, ./../../public/base/header/min-w-12.png 1.25x, ./../../public/base/header/min-w-15.png 1.5x, ./../../public/base/header/min-w-15.png 1.75x, ./../../public/base/header/min-w-20.png 2x, ./../../public/base/header/min-w-20.png 2.25x, ./../../public/base/header/min-w-24.png 2.5x, ./../../public/base/header/min-w-30.png 3x, ./../../public/base/header/min-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="max-button">
+            <img class="icon" srcset="./../../public/base/header/max-w-10.png 1x, ./../../public/base/header/max-w-12.png 1.25x, ./../../public/base/header/max-w-15.png 1.5x, ./../../public/base/header/max-w-15.png 1.75x, ./../../public/base/header/max-w-20.png 2x, ./../../public/base/header/max-w-20.png 2.25x, ./../../public/base/header/max-w-24.png 2.5x, ./../../public/base/header/max-w-30.png 3x, ./../../public/base/header/max-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="restore-button">
+            <img class="icon" srcset="./../../public/base/header/restore-w-10.png 1x, ./../../public/base/header/restore-w-12.png 1.25x, ./../../public/base/header/restore-w-15.png 1.5x, ./../../public/base/header/restore-w-15.png 1.75x, ./../../public/base/header/restore-w-20.png 2x, ./../../public/base/header/restore-w-20.png 2.25x, ./../../public/base/header/restore-w-24.png 2.5x, ./../../public/base/header/restore-w-30.png 3x, ./../../public/base/header/restore-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="close-button">
+            <img class="icon" srcset="./../../public/base/header/close-w-10.png 1x, ./../../public/base/header/close-w-12.png 1.25x, ./../../public/base/header/close-w-15.png 1.5x, ./../../public/base/header/close-w-15.png 1.75x, ./../../public/base/header/close-w-20.png 2x, ./../../public/base/header/close-w-20.png 2.25x, ./../../public/base/header/close-w-24.png 2.5x, ./../../public/base/header/close-w-30.png 3x, ./../../public/base/header/close-w-30.png 3.5x" draggable="false" />
+          </div> -->
+
+        </div>
+      </div>
+      <br />
+      <script src="./../public/js/tbar-controls.js"></script>
+    </header>
+
+    <!-- <nav id="dragbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon">ICON</span>
+      </button>
+    </nav> -->
+    <div id="alert" class="alert jumbotron"></div>
     <div id="vid" class="t-p"></div>
+    <!-- <br /> -->
   </body>
   <script type="text/javascript" src="./../public/js/t.js"></script>
+  
   <script src="./../public/js/tapp.min.js"></script>
+  
 </html>

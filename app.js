@@ -2,14 +2,14 @@
 const express = require('express');
 const app = express();
 
-function initExpressApp() {
+async function init(cb) {
   app.use('/public', express.static(`${__dirname}/public`));
   
   app.get("/ttv/:streamer", (req, res) =>{
     res.setHeader("streamer", req.params.streamer);
     res.sendFile(`${__dirname}/public/ttv.html`);
   });
-  
+
   const exit_events = [
     "beforeExit",
     "exit",
@@ -23,17 +23,28 @@ function initExpressApp() {
       process.exit(0);
     });
   });
+  try {
+    app.listen(SETTINGS.port, () => {
+      SETTINGS.app = app;
+      console.log(`TTV-AD-LESS: http://${SETTINGS.host}:${SETTINGS.port}/ttv/:streamer`);
+    });
+  } catch(e) {
+    console.log(e);
+    cb({
+      error: err,
+      data: {}
+    });
+    // console.log("addr already in use");
+  }
   
-  app.listen(SETTINGS.port, () => {
-    SETTINGS.app = app;
-    console.log(`TTV-AD-LESS: http://${SETTINGS.host}:${SETTINGS.port}/ttv/:streamer`);
-  });
 }
 
 const SETTINGS = {
   host: 'localhost',
   port: 8085,
-  init: initExpressApp,
+  init: init,
 };
 
-SETTINGS.init();
+SETTINGS.init()
+
+module.exports = SETTINGS
